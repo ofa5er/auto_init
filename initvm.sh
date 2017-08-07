@@ -16,7 +16,7 @@ then
   sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make -y
   sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y autoremove && sudo apt-get  -y autoclean
   sudo apt-get -y install -f screen openssh-server openssh-client terminator vim git nmap google-chrome-stable curl ubuntu-make default-jdk docker-compose 
-  wget https://github.com/ofa5er/dotfiles/blob/master/.screenrc -o ~/.screenrc
+  wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.screenrc && mv .screenrc ~/.screenrc
   echo "autocmd Filetype gitcommit setlocal spell textwidth=72" >> ~/.vimrc
   git config --global core.editor "vim"
   git config --global user.name "Fakher Oueslati"
