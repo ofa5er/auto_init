@@ -17,6 +17,7 @@ then
   sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y autoremove && sudo apt-get  -y autoclean
   sudo apt-get -y install -f screen openssh-server openssh-client terminator vim git nmap google-chrome-stable curl ubuntu-make default-jdk docker-compose tmux 
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.screenrc && mv .screenrc ~/.screenrc
   wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.tmux.conf && mv .tmux.conf ~/.tmux.conf
   wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.zhrc && mv .zhrc ~/.zhrc
