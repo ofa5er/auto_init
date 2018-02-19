@@ -25,6 +25,7 @@ then
   git config --global core.editor "vim"
   git config --global user.name "Fakher Oueslati"
   git config --global user.email oueslati.fakher@gmail.com
+  git config --global credential.helper 'cache --timeout=360000'
   umake ide visual-studio-code
   # Run docker without sudo
   sudo groupadd docker
