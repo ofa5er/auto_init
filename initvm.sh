@@ -33,7 +33,7 @@ then
   sudo gpasswd -a $USER docker
   newgrp docker
   # Install Docker Compose
-  sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/latest/docker-compose-$(uname -s)-$(uname -m)"
+  sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.19.0/docker-compose-$(uname -s)-$(uname -m)"
   sudo chmod +x /usr/local/bin/docker-compose 
   docker-compose -v 
   
