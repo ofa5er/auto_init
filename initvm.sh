@@ -29,6 +29,7 @@ then
   # Run docker without sudo
   sudo groupadd docker
   sudo gpasswd -a $USER docker
+  newgrp docker
 else
   echo "Other distribution"
 fi
