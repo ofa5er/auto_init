@@ -26,6 +26,7 @@ then
   git config --global user.name "Fakher Oueslati"
   git config --global user.email oueslati.fakher@gmail.com
   git config --global credential.helper 'cache --timeout=360000'
+  git config --global push.default simple
   # Make zsh default
   sudo chsh -s $(which zsh)
   # Install Docker
