@@ -20,7 +20,7 @@ then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.screenrc && mv .screenrc ~/.screenrc
   wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.tmux.conf && mv .tmux.conf ~/.tmux.conf
-  wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.zshrc && mv .zhrc ~/.zshrc
+  wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.zshrc && mv .zshrc ~/.zshrc
   echo "autocmd Filetype gitcommit setlocal spell textwidth=72" >> ~/.vimrc
   git config --global core.editor "vim"
   git config --global user.name "Fakher Oueslati"
