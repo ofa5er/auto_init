@@ -15,7 +15,7 @@ then
   sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make -y
   sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y autoremove && sudo apt-get  -y autoclean
-  sudo apt-get -y install -f screen openssh-server openssh-client terminator vim git nmap google-chrome-stable curl ubuntu-make default-jdk tmux make gcc docker zsh
+  sudo apt-get -y install -f screen openssh-server openssh-client terminator vim git nmap google-chrome-stable curl ubuntu-make default-jdk tmux make gcc zsh
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
   wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.screenrc && mv .screenrc ~/.screenrc
@@ -28,10 +28,17 @@ then
   git config --global credential.helper 'cache --timeout=360000'
   # Make zsh default
   sudo chsh -s $(which zsh)
-  # Run docker without sudo
-  sudo groupadd docker
-  sudo gpasswd -a $USER docker
-  newgrp docker
+  # Install Docker
+  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - 
+  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+  sudo apt-get update 
+  apt-cache policy docker-ce 
+  sudo apt-get install -y docker-ce 
+  sudo systemctl status docker 
+  #Execute with Sudo (Optional) 
+  sudo usermod -aG docker ${USER} 
+  su - ${USER} 
+  id -nG
   # Install Docker Compose
   sudo curl -o /usr/local/bin/docker-compose -L "https://github.com/docker/compose/releases/download/1.19.0/docker-compose-$(uname -s)-$(uname -m)"
   sudo chmod +x /usr/local/bin/docker-compose 
