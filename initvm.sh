@@ -21,6 +21,8 @@ then
   wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.screenrc && mv .screenrc ~/.screenrc
   wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.tmux.conf && mv .tmux.conf ~/.tmux.conf
   wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.zshrc && mv .zshrc ~/.zshrc
+  echo "syntax on" >> ~/.vimrc
+  echo "plugin indenting on" >> ~/.vimrc
   echo "autocmd Filetype gitcommit setlocal spell textwidth=72" >> ~/.vimrc
   git config --global core.editor "vim"
   git config --global user.name "Fakher Oueslati"
