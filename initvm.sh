@@ -18,9 +18,9 @@ then
   sudo apt-get -y install -f screen openssh-server openssh-client terminator vim git nmap google-chrome-stable curl ubuntu-make default-jdk tmux make gcc zsh
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-  wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.screenrc && mv .screenrc ~/.screenrc
-  wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.tmux.conf && mv .tmux.conf ~/.tmux.conf
-  wget https://raw.githubusercontent.com/ofa5er/dotfilles/master/.zshrc && mv .zshrc ~/.zshrc
+  wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.screenrc && mv .screenrc ~/.screenrc
+  wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.tmux.conf && mv .tmux.conf ~/.tmux.conf
+  wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.zshrc && mv .zshrc ~/.zshrc
   echo "autocmd Filetype gitcommit setlocal spell textwidth=72" >> ~/.vimrc
   git config --global core.editor "vim"
   git config --global user.name "Fakher Oueslati"
