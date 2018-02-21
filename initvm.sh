@@ -72,7 +72,7 @@ elif [ -f /etc/debian_version ]; then
     git config --global credential.helper 'cache --timeout=360000'
     git config --global push.default simple
     # Make zsh default
-    sudo chsh -s $(which zsh)
+    chsh -s $(which zsh)
     # Install Visual Code
     wget https://go.microsoft.com/fwlink/?LinkID=760868
     sudo dpkg -i code*
