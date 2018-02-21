@@ -54,7 +54,7 @@ elif [ -f /etc/debian_version ]; then
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
     sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
     sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y autoremove && sudo apt-get  -y autoclean
-    sudo apt-get -y install -f screen openssh-server openssh-client terminator vim git nmap google-chrome-stable curl default-jdk tmux make gcc zsh build-essential module-assistant
+    sudo apt-get -y install -f screen openssh-server openssh-client terminator vim git nmap google-chrome-stable curl tmux make gcc zsh build-essential module-assistant
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
     source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
     wget https://raw.githubusercontent.com/ofa5er/dotfiles/master/.screenrc && mv .screenrc ~/.screenrc
