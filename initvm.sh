@@ -6,8 +6,8 @@ if [ -f /etc/redhat-release ]; then
 elif [ -f /etc/SuSE-release ]; then
     echo "SuSE"
 elif [ -f /etc/debian_version ]; then
-  dist=`grep DISTRIB_ID /etc/*-release | awk -F '=' '{print $2}'`
-  if [ "$dist" == "Ubuntu" ]; then
+  dist=`grep ID /etc/os-release | awk -F '=' '{print $2}'`
+  if [ "$dist" == "ubuntu" ]; then
     # Ubuntu 16LTS
     echo "Ubuntu"
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -48,7 +48,7 @@ elif [ -f /etc/debian_version ]; then
 
 
     umake ide visual-studio-code
-  elif [ "$dist" == "Debian" ]; then
+  elif [ "$dist" == "debian" ]; then
     #Debian Jessie
     echo "Debian"
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
