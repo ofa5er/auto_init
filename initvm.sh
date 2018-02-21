@@ -6,7 +6,7 @@ if [ -f /etc/redhat-release ]; then
 elif [ -f /etc/SuSE-release ]; then
     echo "SuSE"
 elif [ -f /etc/debian_version ]; then
-  dist=`grep ID /etc/os-release | awk -F '=' '{print $2}'`
+  dist=`grep ^ID= /etc/os-release | awk -F '=' '{print $2}'`
   if [ "$dist" == "ubuntu" ]; then
     # Ubuntu 16LTS
     echo "Ubuntu"
