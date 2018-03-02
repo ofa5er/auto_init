@@ -23,11 +23,6 @@ elif [ -f /etc/debian_version ]; then
     echo "syntax on" >> ~/.vimrc
     echo "filetype plugin indent on" >> ~/.vimrc
     echo "autocmd Filetype gitcommit setlocal spell textwidth=72" >> ~/.vimrc
-    git config --global core.editor "vim"
-    git config --global user.name "Fakher Oueslati"
-    git config --global user.email oueslati.fakher@gmail.com
-    git config --global credential.helper 'cache --timeout=360000'
-    git config --global push.default simple
     # Make zsh default
     sudo chsh -s $(which zsh)
     # Install Docker
@@ -66,11 +61,6 @@ elif [ -f /etc/debian_version ]; then
     echo "syntax on" >> ~/.vimrc
     echo "filetype plugin indent on" >> ~/.vimrc
     echo "autocmd Filetype gitcommit setlocal spell textwidth=72" >> ~/.vimrc
-    git config --global core.editor "vim"
-    git config --global user.name "Fakher Oueslati"
-    git config --global user.email oueslati.fakher@gmail.com
-    git config --global credential.helper 'cache --timeout=360000'
-    git config --global push.default simple
     # Make zsh default
     chsh -s $(which zsh)
     # Install Visual Code
@@ -87,3 +77,12 @@ elif [ -f /etc/debian_version ]; then
 else
   echo "Other distribution"
 fi
+
+## Common
+# Git config
+git config --global core.editor "vim"
+git config --global user.name "Fakher Oueslati"
+git config --global user.email CHANGE_WITH_MY_EMAIL
+git config --global credential.helper 'cache --timeout=360000'
+git config --global push.default simple
+git config --global pull.rebase true
