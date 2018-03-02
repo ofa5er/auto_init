@@ -83,6 +83,6 @@ fi
 git config --global core.editor "vim"
 git config --global user.name "Fakher Oueslati"
 git config --global user.email CHANGE_WITH_MY_EMAIL
-git config --global credential.helper 'cache --timeout=360000'
+git config --global credential.helper 'cache --timeout=36000'
 git config --global push.default simple
 git config --global pull.rebase true
